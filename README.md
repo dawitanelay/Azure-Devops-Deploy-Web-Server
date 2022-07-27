@@ -17,7 +17,9 @@ For this project, you will write a Packer template and a Terraform template to d
 
 2. Create your infrastructure as code
 
-3. Update this README to reflect how someone would use your code.
+3. Create your tagging-policy in Azure
+
+4. Create your resource group in Azure
 
 ### Dependencies
 1. Create an [Azure Account](https://portal.azure.com) 
