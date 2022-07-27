@@ -25,9 +25,9 @@ For this project, you will write a Packer template and a Terraform template to d
 
 ## Dependencies
 1. Create an [Azure Account](https://portal.azure.com) 
-2. Install the [Azure command line interface](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
-3. Install [Packer](https://www.packer.io/downloads)
-4. Install [Terraform](https://www.terraform.io/downloads.html)
+2. Install  latest version  [Azure command line interface](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+3. Install  latest version [Packer](https://www.packer.io/downloads)
+4. Install latest version [Terraform](https://www.terraform.io/downloads.html)
 
 ## Instructions
 **Your words here**
