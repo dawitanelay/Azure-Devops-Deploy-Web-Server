@@ -1,7 +1,9 @@
 
 # Azure Infrastructure Operations Project: Deploying a scalable IaaS web server in Azure
+
 ![alt text](diagram/Architectur-Diagram.png)
-### Introduction
+
+## Introduction
 Infrastructure as code is one of the five practices that we consider the heart of DevOps. Infrastructure as code provides a significant 
 benefit in terms of creating, deploying, upgrading, and deleting infrastructure. Infrastructure as code make the deployment procedure as simple 
 as pressing a button.
@@ -12,7 +14,7 @@ This file can be saved and reused which enables you to safely and predictably cr
 
 For this project, you will write a Packer template and a Terraform template to deploy a customizable, scalable web server in Azure.
 
-### Getting Started
+## Getting Started
 1. Clone this repository
 
 2. Create your infrastructure as code
@@ -21,16 +23,16 @@ For this project, you will write a Packer template and a Terraform template to d
 
 4. Create your resource group in Azure
 
-### Dependencies
+## Dependencies
 1. Create an [Azure Account](https://portal.azure.com) 
 2. Install the [Azure command line interface](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 3. Install [Packer](https://www.packer.io/downloads)
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
-### Instructions
+## Instructions
 **Your words here**
 
-### Output
+## Output
 **Your words here**
 
 
