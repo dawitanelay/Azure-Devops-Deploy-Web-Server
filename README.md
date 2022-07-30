@@ -50,6 +50,7 @@ chmod a+x setEnv.sh
 sources setEnv.sh
 ```
 After you have exported and set the environment variables, use 'printenv | grep "ARM_CLIENT_ID" ' to ensure that they are correctly configured.
-
+```bash
+printenv | grep "ARM_CLIENT_ID"
 ## Output
 **Your words here**
