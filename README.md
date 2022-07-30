@@ -80,3 +80,11 @@ printenv | grep "ARM_CLIENT_ID"
 * Choose the subscriptions that are required.
 * Click on the overview
 * Copy the Subscription Id
+
+#### :ballot_box_with_check:  Deploy the Packer Image :ballot_box_with_check:  
+
+Run the following command to deploy the packer image.
+
+```bash
+packer build server.json
+```
