@@ -1,6 +1,4 @@
 {
-    "type": "Microsoft.Authorization/policyDefinitions",
-    "name": "test-name",
     "properties": {
       "displayName": "Deny the creation of resources that do not have tags",
       "policyType": "Custom",
