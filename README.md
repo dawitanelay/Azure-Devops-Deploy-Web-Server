@@ -96,3 +96,20 @@ Then we can access (i.e. list or delete) this image using the CLI:
 az image list
 az image delete -g packer-rg -n myPackerImage
 ```
+Deploy the infrastructure with Terraform template
+#### :red_circle: Deploy the infrastructure with Terraform template :red_circle:
+To use variables for your main.tf, you can specify your variables like below in your vars.tf file.
+
+```tf
+variable "prefix" {
+  description = "The prefix which should be used for all resources in this example"
+  default = "udacity"
+}
+
+```
+
+And in your main.tf, you can call the variables like
+
+```tf
+var.prefix
+```
