@@ -90,8 +90,7 @@ packer build server.json
 ```
 This can take quite a while so feel free to get your self a drink :coffee:
 
-![packer output](./images/packerBuild1.png)
-![packer output](./images/packerBuild2.png)
+![packer output](./images/packerBuild1.png)![packer output](./images/packerBuild2.png)
 Then we can access (i.e. list or delete) this image using the CLI:
 ```bash
 az image list
