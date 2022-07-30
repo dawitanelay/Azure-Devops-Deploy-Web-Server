@@ -89,3 +89,5 @@ Run the following command to deploy the packer image.
 packer build server.json
 ```
 This can take quite a while so feel free to get your self a drink :coffee:
+
+![packer output](./images/packerBuild.png)
