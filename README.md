@@ -30,7 +30,6 @@ For this project, you will write a Packer template and a Terraform template to d
 4. Install latest version [Terraform](https://www.terraform.io/downloads.html)
 
 ## Instructions
-**Your words here**
 Once you've gathered your dependencies, we'll need the following steps to deploy the scalable web server on Azure:
 1. Deploy the packer image
 2. Deploy the infrastructure with Terraform template
@@ -53,4 +52,29 @@ After you have set the environment variables, use 'printenv ' to ensure that the
 ```bash
 printenv | grep "ARM_CLIENT_ID"
 ## Output
-**Your words here**
+
+#### :ballot_box_with_check: Get Client ID
+
+* Login into your azure account
+* Search and click "Azure Active Directory"
+* Click "App registrations" under the Manage tab
+* Click the application that you own
+* Copy the client ID
+
+
+#### :ballot_box_with_check: Get Client Secret
+
+* Login into your azure account
+* Search and click "Azure Active Directory"
+* Click "App registrations" under the Manage tab
+* Click the application that you own
+* Click the "Certificates & Secrets" under the Manage tab
+* Create a client secret as you need.
+
+#### :ballot_box_with_check: Get Subscription ID
+
+* Login into your azure account
+* Search and click "Subscriptions"
+* Choose the subscriptions that are required.
+* Click on the overview
+* Copy the Subscription Id
