@@ -51,7 +51,7 @@ sources setEnv.sh
 After you have set the environment variables, use 'printenv ' to ensure that they are correctly configured.
 ```bash
 printenv | grep "ARM_CLIENT_ID"
-## Output
+```
 
 #### :ballot_box_with_check: Get Client ID
 
