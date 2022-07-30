@@ -151,7 +151,7 @@ resource "azurerm_linux_virtual_machine" "main" {
     azurerm_network_interface.main[count.index].id
   ]
   availability_set_id = azurerm_availability_set.main.id
-  source_image_id     = var.packerImageId
+  source_image_id     = var.PackerImage
 
 
 
