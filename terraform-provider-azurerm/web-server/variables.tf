@@ -25,5 +25,6 @@ variable "vm_count"{
 }
 
 variable "PackerImage"{
-  default = "/subscriptions/59ce2236-a139-4c59-91d8-bedbf055dbb9/resourceGroups/udacity-rg/providers/Microsoft.Compute/images/PackerImage"
+  default = "/subscriptions/13e7b74b-ca4b-405f-9015-8032555cec7c/resourceGroups/Azuredevops/providers/Microsoft.Compute/images/PackerImage"
+
 }
