@@ -34,7 +34,7 @@ Once you've gathered your dependencies, we'll need the following steps to deploy
 1. Deploy the packer image
 2. Deploy the infrastructure with Terraform template
 
-#### ::red_circle::  Deploy the Packer Image ::red_circle::
+#### :red_circle:  Deploy the Packer Image :red_circle:
 Using packer we will deploy  virtual machines images. Before that set the environment variable as following
 #### ::pencil::  Config Environment Variables ::pencil::
 
