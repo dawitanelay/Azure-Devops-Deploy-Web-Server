@@ -150,7 +150,7 @@ If you were successful in deploying the resources, it would look like this:
 You may also check the Azure site to see if these resources have been delivered. The end outcome will be as follows.
 
 ![Azrue-portal-output1 ](./images/Azrue-portal-output1.png)
-![Azrue-portal-output1 ](./images/Azure-portal-outout2)
+![Azrue-portal-output2 ](./images/Azure-portal-outout2)
 
 In the terminal, type `terraform show` to check the resources
 
