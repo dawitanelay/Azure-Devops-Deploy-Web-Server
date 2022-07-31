@@ -118,7 +118,9 @@ And in your main.tf, you can call the variables like
 ```tf
 var.prefix
 ```
-*** import resource group ***
+
+### Import resource group 
+
 We've previously established the resources group for our PackerImage, hence we can't deploy the same resource group.
 We must import the existing resource group before it can determine which resource group to install.
 ```bash
