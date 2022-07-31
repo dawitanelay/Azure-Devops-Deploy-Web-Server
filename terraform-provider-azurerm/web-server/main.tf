@@ -1,14 +1,29 @@
 # Configure the Azure Provider
+
 provider "azurerm" {
   features {}
 }
 
-# use exited created resource group
+# uncomment this if you want to create a resource group
+# # Create or Update a resource group
+# resource "azurerm_resource_group" "main" {
+#   name     = "${var.prefix}-rg"
+#   location = var.location
+# }
 
+# use exited created resource group and import it
 resource "azurerm_resource_group" "main" {
 name     = "Azuredevops"
-location = "East US"
+location = "South Central US"
+tags = {
+  DeploymentId = "202793",
+  LaunchId = "1346",
+  LaunchType= "ON_DEMAND_LAB",
+  TemplateId = "1181",
+  TenantId = "none"
 }
+}
+
 
 # Create a virtual network within the resource group
 resource "azurerm_virtual_network" "main" {
@@ -99,7 +114,7 @@ resource "azurerm_public_ip" "main" {
   }
 }
 
-# create a load balancer
+
 # create a load balancer
 resource "azurerm_lb" "main" {
   name                = "${var.prefix}-lb"
@@ -117,10 +132,10 @@ resource "azurerm_lb" "main" {
 }
 
 resource "azurerm_lb_backend_address_pool" "main" {
-  resource_group_name = azurerm_resource_group.main.name
   loadbalancer_id     = azurerm_lb.main.id
   name                = "BackEndAddressPool"
 }
+
 
 
 # Create a availabity set for virtual machines
@@ -139,7 +154,6 @@ resource "azurerm_availability_set" "main" {
 
 resource "azurerm_linux_virtual_machine" "main" {
   count = var.vm_count
-
   name                            = "${var.prefix}-vm-${var.server_names[count.index]}"
   resource_group_name             = azurerm_resource_group.main.name
   location                        = azurerm_resource_group.main.location
