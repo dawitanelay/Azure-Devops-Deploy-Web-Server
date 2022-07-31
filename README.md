@@ -103,7 +103,7 @@ az image delete -g packer-rg -n myPackerImage
 ```
 
 #### :red_circle: Deploy the infrastructure with Terraform template :red_circle:
-To use variables for your main.tf, you can specify your variables like below in your vars.tf file.
+To use variables for your main.tf, you can specify your variables like below in your variables.tf file.
 
 ```tf
 variable "prefix" {
