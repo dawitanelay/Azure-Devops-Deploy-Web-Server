@@ -83,7 +83,7 @@ printenv | grep "ARM_CLIENT_ID"
 * Click on the overview
 * Copy the Subscription Id
 
-Please check the link for more clear visualization [a link] (https://docs.lacework.com/onboarding/gather-the-required-azure-client-id-tenant-id-and-client-secret)
+Please check the link for more clear visualization [a link](https://docs.lacework.com/onboarding/gather-the-required-azure-client-id-tenant-id-and-client-secret)
 
 #### :red_circle:  Deploy the Packer Image :red_circle:  
 
@@ -94,7 +94,7 @@ packer build server.json
 ```
 This can take quite a while so feel free to get your self a drink :coffee:
 
-![packer output](./images/packerBuild1.png)![packer output](./images/packerBuild2.png)
+![packer output](./images/packerBuild.png)
 Then we can access (i.e. list or delete) this image using the CLI:
 To delete image at the end use the following (skip it for our case )
 ```bash
