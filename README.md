@@ -167,4 +167,4 @@ After the deployment, remember to destroy the resources.
 cd /terraform-provider-azurerm/web-server
 terraform destroy
 ```
-Please see the report for more ![Report](Report .pdf)
+Please see the report for more 
