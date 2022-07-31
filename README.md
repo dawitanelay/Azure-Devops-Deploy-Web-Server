@@ -119,7 +119,7 @@ And in your main.tf, you can call the variables like
 var.prefix
 ```
 
-### Import resource group 
+### Import resource group
 
 We've previously established the resources group for our PackerImage, hence we can't deploy the same resource group.
 We must import the existing resource group before it can determine which resource group to install.
@@ -167,3 +167,4 @@ After the deployment, remember to destroy the resources.
 cd /terraform-provider-azurerm/web-server
 terraform destroy
 ```
+Please see the report for more [Report](Report .pdf)
