@@ -144,9 +144,12 @@ terraform apply
 ```
 ## Output
 If you were successful in deploying the resources, it would look like this:
+
 ![tarraform Apply ](./images/tarraformApply.png)
+
 You may also check the Azure site to see if these resources have been delivered. The end outcome will be as follows.
-![packer output](./images/Azrue portal output1.png)![packer output](./images/Azrue portal output2.png)
+
+![Azrue portal output1](./images/Azrue portal output1.png)![packer output](./images/Azure portal outout2.png)
 
 In the terminal, type `terraform show` to check the resources
 
