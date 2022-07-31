@@ -41,9 +41,11 @@ Using packer we will deploy  virtual machines images. Before that set the enviro
 Go to the setEnv.sh script and set the environment variables like below.
 
 ```bash
-export ARM_CLIENT_ID=4685768f-1912-4c9a-8226-b670918xxxxfakeclientid
-export ARM_CLIENT_SECRET=6GNB5c5p_5H.-odi_zffakesecret
-export ARM_SUBSCRIPTION_ID=59ce2236-a139-4c5fakesubsribtionid
+
+export ARM_CLIENT_ID=d12050fc-42aa-4e02-84ed-3b7663b17b6f
+export ARM_CLIENT_SECRET=bbR8Q~vWk2Qwg4yrsov2piwWXwaJSwEnlQ~yWc5O
+export ARM_SUBSCRIPTION_ID=13e7b74b-ca4b-405f-9015-8032555cec7c
+export ARM_TENANT_ID=f958e84a-92b8-439f-a62d-4f45996b6d07
 ```
 Then run the following command
 ```bash
@@ -81,6 +83,8 @@ printenv | grep "ARM_CLIENT_ID"
 * Click on the overview
 * Copy the Subscription Id
 
+Please check the link for more clear visualization [a link] (https://docs.lacework.com/onboarding/gather-the-required-azure-client-id-tenant-id-and-client-secret)
+
 #### :red_circle:  Deploy the Packer Image :red_circle:  
 
 Run the following command to deploy the packer image.
@@ -92,6 +96,7 @@ This can take quite a while so feel free to get your self a drink :coffee:
 
 ![packer output](./images/packerBuild1.png)![packer output](./images/packerBuild2.png)
 Then we can access (i.e. list or delete) this image using the CLI:
+To delete image at the end use the following (skip it for our case )
 ```bash
 az image list
 az image delete -g packer-rg -n myPackerImage
@@ -112,4 +117,47 @@ And in your main.tf, you can call the variables like
 
 ```tf
 var.prefix
+```
+*** import resource group ***
+We've previously established the resources group for our PackerImage, hence we can't deploy the same resource group.
+We must import the existing resource group before it can determine which resource group to install.
+```bash
+cd /terraform-provider-azurerm/web-server
+terraform init
+terraform import azurerm_resource_group.main /subscriptions/{subsriptionId}/resourceGroups/{resourceGroupName}
+```
+```bash
+az login -u your-user-name -p your-password
+```
+To deploy our configuration, run the following commands:
+```bash
+cd /terraform-provider-azurerm/web-server
+
+terraform plan -out solution.plan
+```
+![terraform Plan](./images/terraformPlan.png)
+
+```bash
+cd /terraform-provider-azurerm/web-server
+
+terraform apply
+```
+## Output
+If you were successful in deploying the resources, it would look like this:
+![tarraform Apply ](./images/tarraformApply.png)
+You may also check the Azure site to see if these resources have been delivered. The end outcome will be as follows.
+![packer output](./images/Azrue portal output1.png)![packer output](./images/Azrue portal output2.png)
+
+In the terminal, type `terraform show` to check the resources
+
+```bash
+cd /terraform-provider-azurerm/web-server
+terraform show
+```
+
+After the deployment, remember to destroy the resources.
+
+``` bash
+cd /terraform-provider-azurerm/web-server
+terraform destroy
 ```
